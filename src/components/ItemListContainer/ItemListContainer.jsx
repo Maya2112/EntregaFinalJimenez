@@ -1,15 +1,31 @@
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList";
+import { pedirDatos } from "../../utils/utils";
+import { useParams } from "react-router-dom";
 
 
+const ItemListContainer = () => {
+    const [services, setServices] = useState([])
 
-const itemListContainer = ({item}) => {
+    const { categoryId } = useParams()
+
+    useEffect(() => {
+
+        pedirDatos() // <= Promise
+            .then((data) => {
+                const items = categoryId 
+                                ? data.filter(servs => servs.category === categoryId)
+                                : data
+
+                setServices(items)
+            })
+    }, [categoryId])
 
     return (
-        <section>
-            <h2>Items</h2>
-            <hr/>
-            <p>{item}</p>
-        </section>
-    )
-}
+        <>
+            {services && <ItemList services={services} />}
+        </>
+    );
+};
 
-export default itemListContainer;
+export default ItemListContainer;
