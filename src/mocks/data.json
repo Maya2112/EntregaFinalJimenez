@@ -4,7 +4,6 @@
     "price": 37247,
     "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
     "category": "asesorias",
-    "slots": 72,
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 2,
@@ -12,23 +11,20 @@
     "price": 3125,
     "img": "http://dummyimage.com/250x250.png/ff4444/ffffff",
     "category": "mentorias",
-    "slots": 3,
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 3,
     "name": "Brandearte",
     "price": 9780,
     "img": "http://dummyimage.com/250x250.png/dddddd/000000",
-    "category": "talleres",
-    "slots": 89,
+    "category": "talleres",  
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 4,
     "name": "Creacion de contenido",
     "price": 37726,
     "img": "http://dummyimage.com/250x250.png/dddddd/000000",
-    "category": "masterclass",
-    "slots": 64,
+    "category": "masterclass",    
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 5,
@@ -36,15 +32,13 @@
     "price": 26553,
     "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
     "category": "mentorias",
-    "stock": 44,
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 6,
     "name": "Mentoria 1a1",
     "price": 12587,
     "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    "category": "mentorias",
-    "stock": 44,
+    "category": "mentorias",    
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }, {
     "id": 7,
@@ -59,8 +53,7 @@
     "name": "BrandingTerapia",
     "price": 32569,
     "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    "category": "talleres",
-    "stock": 44,
+    "category": "talleres",   
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
 }
 ]

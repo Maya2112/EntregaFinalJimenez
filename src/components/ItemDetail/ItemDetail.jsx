@@ -1,12 +1,26 @@
 import Boton from "../CartWidget/Boton";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import {Link, useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import DateSelector from "./DateSelector"
 
 
 const ItemDetail = ({ item }) => {
     const navigate = useNavigate()
+    const [cantidad, setCantidad] = useState(1)
+    const { addToCart, isInCart } = useContext(CartContext)
+
+    const handleAgregar = () => {
+    const itemToCart = {
+        ...item,
+        cantidad,
+    }
+    setCantidad(cantidad + 1)
+    addToCart(itemToCart)
+}
 
     const handleVolver = () => {
-    navigate(-1)
+        navigate(-1)
     }
 
     return (
@@ -19,11 +33,17 @@ const ItemDetail = ({ item }) => {
             <div>
                 <p>{item.description}</p>
                 <p className="text-xl font-bold text-white">Precio: ${item.price}</p>  
-                <div className="flex gap-4">
-                <Boton className="hover:bg-lime-400 hover:border-lime-400">Agregar al carrito</Boton>
-                <Boton onClick={handleVolver} className="hover:bg-violet-800 border-violet-800">Volver</Boton>
+                <div className="flex w-auto gap-4 items-center">
+                    {
+                        isInCart( item.id )
+                        ? <Boton><Link to="/cart">Terminar mi compra</Link></Boton>
+                        :<>
+                            <DateSelector/>
+                            <Boton onClick={handleAgregar}>Agregar al carrito</Boton>
+                        </>
+                    }
+                    <Boton onClick={handleVolver} className="hover:bg-violet-800 border-violet-800">Volver</Boton>
                 </div>      
-                
             </div>
         </div>
         <hr/>
@@ -31,4 +51,4 @@ const ItemDetail = ({ item }) => {
     );
 };
 
-export default ItemDetail;
+export default ItemDetail
